@@ -1,0 +1,433 @@
+@import './_colors';
+@import './_defaults';
+@import './_mixins';
+
+nav{
+    background-color: $primary-color;
+    padding: 30px 70px;
+    color: $secondary-color;
+    @include flex-view(row,space-between,center);
+    p{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    div{
+        ul{
+            list-style: none;
+            gap: 40px;
+            line-height: 24px;
+            @include flex-view(row,null,center);
+            a{
+                text-decoration: none;
+                cursor: pointer;
+                color: $secondary-color
+            }
+        }
+    }
+}
+
+.main_container{
+    @include flex-view(row,space-between,null);
+    height: 80vh;
+    background-color: $primary-color;
+    padding: 100px 70px;
+    .main_left{
+        height: 60%;
+        width: 50%;
+         @include flex-view(column,space-between,null);
+         gap: 56px;
+        .title{
+           @include text(52px,600,$secondary-color,67.2px)
+        }
+        .text{
+           @include text(18px,400,$secondary-color,24px);
+           letter-spacing: 1px;
+        }
+        .btn_first{
+            background-color: $btn-color;
+            border-radius: 6px;
+            color: black;
+            padding: 16px 40px;
+        }
+        .btn_second{
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            padding: 16px 40px;
+        }
+    }
+    .main_right{
+        height: 60%;
+
+    }
+}
+
+.data{
+    background-color: $section-bg;
+    padding: 100px 70px;
+    @include flex-view(row,space-between,center);
+    .text_div{
+        @include text(32px,700,$text-color,45px);
+        .data_p{
+        @include text(16px,400,$text-color,24px);
+        }
+    }
+    .icon_div{
+        @include flex-view(row,center,null);
+        gap: 8px;
+        @include text(24px,700,$text-color,33px);
+        img{
+            width: 28px;
+            height: 28px;
+        }
+    }
+}
+
+.card_section{
+    padding:70px;
+    .section_title{
+        @include text(38px,600,$card-title-color,57px);
+        width: 560px;
+        text-align: center;
+        margin-bottom: 32px
+    }
+    @include flex-view(column,center,center);
+    .all_card{
+    @include flex-view(row,center,center);
+        flex-wrap: wrap;
+        gap: 24px;
+        .card{
+            width: 30%;
+            background-color: $card-bg;
+            padding: 42px;
+            @include flex-view(column,center,null);
+            gap: 12px;
+            p{
+                line-height: 28px;
+                color: $card-title-color;
+            }
+            img{
+                width: 40px;
+                height: 40px;
+            }
+
+        }
+    }
+    
+}
+
+.collabrate_section{
+    height: 600px;
+    padding: 70px ;
+    @include flex-view(row,center,center);
+    .left_collabrate{
+        padding: 24px;
+        // width: 50%;
+        width: 60%;
+
+        height: 100%;
+        @include flex-view(column,center,null);
+        gap: 20px;
+        .title{
+            @include text(18px,600,$card-title-color,27px);
+        }
+        h3{
+            @include text(38px,600,$card-title-color,57px);
+            width: 70%;
+        }
+        .text{
+            @include text(16px,600,$card-title-color,27px)
+        }
+    }
+    .right_collabrate{
+        width: 40%;
+    }
+}
+
+.category_section{
+    padding: 70px ;
+    width: 100%;
+    @include flex-view(column,space-between,center);
+    hr{
+        width: 100%;
+        color: gray;
+        margin: 12px 0;
+    }
+    .star{
+        background-color: $primary-color;
+        position: absolute;
+        padding: 4px 12px;
+        border-radius: 12px;
+        color: white;
+        right: 6%;
+        top: 62%
+    }
+    .top_category{
+        @include flex-view(row,space-between,center);
+        width: 100%;
+        h3{
+            @include text(38px,700,$card-title-color,57px);
+            width: 28%;
+        }
+        .btn_first{
+            background-color: $btn-color;
+            border-radius: 6px;
+            color: black;
+            padding: 16px 40px;
+        }
+        .btn_second{
+            background-color: white;
+            color: $primary-color;
+            border: none;
+            padding: 16px 40px;
+        }
+    }
+    .bottom_category{
+        width: 100%;
+        @include flex-view(row,space-between,center);
+        flex-wrap: wrap;
+        .card_category{
+        position: relative;
+            @include flex-view(column,space-between,null);
+            button{
+                position: absolute;
+                top: 54%;
+                right: 6%;
+            }
+            width: 30%;
+            padding: 24px 0;
+            border-radius: 10px;
+            img{
+            border-radius: 10px;
+            }
+            .description{
+                padding: 12px;
+                h4{
+                    @include text(24px,500,$card-title-color,34px)
+                }
+                p{
+                    @include text(16px,400,$card-title-color,24px);
+                    width: 70%;
+                }
+                .icon_group{
+                    @include flex-view(row,space-between,center);
+                    div{
+                        padding: 4px;
+                        text-align: center;
+                        @include flex-view(row,space-between,center);
+                        gap: 2px;
+                        p{
+                        margin: auto;
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide_section{
+    background-color: $slide-bg;
+    width: 100%;
+    padding: 70px;
+    @include flex-view(row,space-between,center);
+    gap: 140px;
+    .left_slide{
+        h3{
+            @include text(28px,600,$primary-color,47px);
+        }
+        p{
+            color: $primary-color;
+        }
+    }
+    .right_slide{
+        .data_slide{
+            @include text(26px,500,$primary-color,37px);
+            padding: 12px
+        }
+        .avatar{
+            @include flex-view(row,null,center);
+            gap:20px;
+            h6{
+                font-size: 18px;
+                color: $primary-color;
+            }
+            p{
+                color: $primary-color;
+                font-size: 12px;
+            }
+        }
+    }
+}
+.acordian_section{
+    width: 100%;
+    padding: 70px;
+    @include flex-view(row,space-between,null);
+    gap: 80px;
+    .left_accor{
+        width: 30%;
+        h3{
+            @include text(32px,600,$primary-color,47px)
+        }
+        p{
+            color: $primary-color;
+        }
+    }
+    .right_accor{
+        width: 70%;
+    }
+}
+.form_section{
+    @include flex-view(row,space-between,null);
+    width: 100%;
+    padding: 70px;
+    background-color: $primary-color;
+    .left_form{
+        color: $secondary-color;
+        width: 40%;
+    }
+    .right_form{
+        width: 40%;
+        @include flex-view(column,null,null);
+        gap: 10px;
+        h3{
+            @include text(28px,600,$secondary-color,47px)
+        }
+        p{
+            color: $secondary-color
+        }
+        form{
+            width: 80%;
+        @include flex-view(column,space-between,null);
+        text-align: center;
+        gap: 20px;
+        input{
+            padding: 12px;
+            background-color: $primary-color;
+            border: 1px solid $secondary-color;
+        }
+        button{
+            background-color: $btn-color;
+            color: $primary-color;
+            font-weight: bold;
+            padding: 12px 0;
+        }
+
+        }
+    }
+}
+.blog_section{
+    padding: 70px ;
+    width: 100%;
+    @include flex-view(column,space-between,center);
+    hr{
+        width: 100%;
+        color: gray;
+        margin: 12px 0;
+    }
+    .top_blog{
+        @include flex-view(row,space-between,center);
+        width: 100%;
+        h3{
+            @include text(38px,700,$card-title-color,57px);
+            width: 28%;
+        }
+        .btn_first{
+            background-color: $btn-color;
+            border-radius: 6px;
+            color: black;
+            padding: 16px 40px;
+        }
+        .btn_second{
+            background-color: white;
+            color: $primary-color;
+            border: none;
+            padding: 16px 40px;
+        }
+    }
+    .bottom_blog{
+        width: 100%;
+        @include flex-view(row,space-between,center);
+        .card_blog{
+            @include flex-view(column,space-between,null);
+            width: 30%;
+            .description{
+                padding: 12px;
+                h4{
+                    @include text(24px,500,$card-title-color,34px)
+                }
+                p{
+                    @include text(16px,400,$card-title-color,24px);
+                    width: 70%;
+                }
+                .btn_group{
+                    @include flex-view(row,null,center);
+                    gap: 14px;
+                    button{
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    
+    @include flex-view(column,null,null);
+    .top_footer{
+        background-color: $primary-color;
+    width: 100%;
+    padding: 70px;
+        color: $secondary-color;
+        @include flex-view(row,space-between,null);
+        .left_footer{
+            width: 50%;
+        }
+        .right_footer{
+            width: 50%;
+
+            @include flex-view(row,space-between,null);
+            li{
+                list-style: none;
+            }
+        }
+    }
+    .bottom_footer{
+        background-color: white;
+        padding: 30px;
+        @include flex-view(row,space-between,center);
+        ul{
+        @include flex-view(row,space-between,center);
+        gap: 12px;
+        list-style: none;
+        font-weight: 600;
+        }
+    }
+}
+
+/*----------------course----------------*/
+.link_class{
+    padding: 35px 70px;
+    background-color: $section-bg;
+}
+.course_container{
+    margin-top: 120px;
+    @include flex-view(column,space-between,center);
+    gap: 20px;
+    input{
+        width: 30%;
+        padding: 20px;
+        border-radius: 12px
+    }
+    ul{
+        @include flex-view(row,space-between,center);
+        gap: 12px;
+        list-style: none;
+        li{
+            @include text(18px,600,$primary-color,32px)
+        }
+
+    }
+}
